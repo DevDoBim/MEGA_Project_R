@@ -1,6 +1,14 @@
 # Game Framework Project 
 
 ### 24.10.07
+▶ 파일 구조
+  - MEGA_Client 
+    - Client 영역 (WinAPI Project, MEGA_Lib 참조)
+  - MEGA_Lib 
+    - 공유 프로젝트 빌 목적 (정적 Library, MEGA_Source 참조)
+  - MEGA_Source 
+    - Clinet에서 사용할 기능들의 모음 (공유 프로젝트)
+
 ▶ WinAPI Message 처리
   - PeekMessage 함수 사용 : 게임은 사용자의 입력이 없어도 진행되어야 한다.   
 
