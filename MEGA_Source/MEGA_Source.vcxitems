@@ -15,10 +15,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Application.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Input.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MEGA_InClude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Singleton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Input.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Singleton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
   </ItemGroup>
 </Project>

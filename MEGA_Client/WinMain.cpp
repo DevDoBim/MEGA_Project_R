@@ -7,8 +7,8 @@
 #define MAX_LOADSTRING 256
 
 HINSTANCE hInst;
-WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
-WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+WCHAR szTitle[MAX_LOADSTRING];          
+WCHAR szWindowClass[MAX_LOADSTRING];            
 
 
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -24,12 +24,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-    // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_MEGACLIENT, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
-    // 애플리케이션 초기화를 수행합니다:
+    // 애플리케이션 초기화
     if (!InitInstance(hInstance, nCmdShow))
     {
         return FALSE;
@@ -94,15 +93,17 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
     hInst = hInstance;
 
+    // 윈도우 사이즈 지정
+    constexpr UINT width  = 1280;
+    constexpr UINT height = 800;
+
     HWND hWnd = CreateWindowW
     (
         szWindowClass,
         szTitle,
         WS_OVERLAPPEDWINDOW,
-        CW_USEDEFAULT,
-        0,
-        CW_USEDEFAULT,
-        0,
+        CW_USEDEFAULT, 0,
+        width, height,
         nullptr,
         nullptr,
         hInstance,
@@ -114,8 +115,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
         return FALSE;
     }
 
+    // Application Start
     MEGA::Singleton<MEGA::Application>::Init();
-    Application_Inst->Init();
+    Application_Inst->Init(hWnd ,width, height);
 
     ShowWindow(hWnd, nCmdShow);
     UpdateWindow(hWnd);
@@ -145,13 +147,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         }
     }
     break;
-    case WM_PAINT:
-    {
-        PAINTSTRUCT ps;
-        HDC hdc = BeginPaint(hWnd, &ps);
-        EndPaint(hWnd, &ps);
-    }
-    break;
+
     case WM_DESTROY:
         PostQuitMessage(0);
         break;

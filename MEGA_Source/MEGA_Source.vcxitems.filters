@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Singleton.cpp">
+      <Filter>Design_Pattern\Sigleton</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Application.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Singleton.h">
+      <Filter>Design_Pattern\Sigleton</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MEGA_InClude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Time.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{7b2888b1-5f18-4374-b069-3a73a975fc9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{e896d192-894a-4498-b4eb-ccf4e39ef944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Design_Pattern">
+      <UniqueIdentifier>{922bf2b2-41a2-449b-b83e-2f4ba1bc29c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Design_Pattern\Sigleton">
+      <UniqueIdentifier>{cb15d488-6ec1-4917-a973-05ca28ee7e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{441e55f5-f053-47fa-8b5f-b5a480615c67}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
