@@ -1,6 +1,5 @@
 # Game Framework Project 
 
-### 24.10.07
 ▶ 파일 구조
   - MEGA_Client 
     - Client 영역 (WinAPI Project, MEGA_Lib 참조)
@@ -18,7 +17,6 @@
 
 ***
 
-### 24.10.10
 ▶ 윈도우 창 크기 설정
   - WinMain에서 hWnd, width, height를 인수로 받아 AdjustWindowRect 함수 이용
     
